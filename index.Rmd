@@ -12,3 +12,9 @@ output:
 ## Project thoughts
 
 I am interested in exploring data related to... Sports statistics in major league baseball, finding a correlation mental health advocacy and sports performace, or religious identity and how it correlates to mental health amongst young adults 
+
+Are lefty catchers in baseball really that bad? I other words, what is the success rate of lefty catchers in major league baseball compared to right catchers- and is this comparison statistically significant. 
+I hypothesize that right-handed catchers will have a higher success rate in throwing out runners at second base than lefty catchers. 
+My sample will be all starting major league right handed catchers from 1980-2023 and all starting lefty catchers from 1980-2023. I will then use a simple random sample of each set of catchers to narrow it down to be 10 righty catchers and 10 lefty catchers. The variabel will be =1 for righty and =0 for lefty.
+The outcome variable will be the success rate a throwing the runner out at second base. I might also see if I can find data on framing success in baseball for righty and lefty catchers, but so far I don't exactly know the scale for my outcome variable.
+If I observe similar success rates of throwing runners out from a righty and lefty catcher, then the common rumor that being a lefty catcher is bad will be disproved. If I observe the opposite, then the rumor will be true.
