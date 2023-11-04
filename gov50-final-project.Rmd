@@ -33,13 +33,13 @@ pacman::p_load_current_gh("BillPetti/baseballr")
 library(tidyverse)
 library(broom)
 library(haven)
-data <- bref_daily_batter("2015-08-01", "2015-10-03") 
-data |>
+mlb <- bref_daily_batter("2015-08-01", "2015-10-03") 
+mlb |>
   head()
 ```
 
 ```{r}
-first_plot <- data |>
+first_plot <- mlb |>
   ggplot(mapping = aes(x = BB, y = RBI)) + geom_point() + labs( x = "# of Walks Aug.- Oct. 2015", y = "# of RBIs Aug.- Oct. 2015")
 first_plot
   

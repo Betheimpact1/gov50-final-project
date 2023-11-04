@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["gov50-final-project_files/anchor-4.2.2/anchor.min.js","gov50-final-project_files/bowser-1.9.3/bowser.min.js","gov50-final-project_files/distill-2.2.21/template.v2.js","gov50-final-project_files/header-attrs-2.24/header-attrs.js","gov50-final-project_files/jquery-3.6.0/jquery-3.6.0.js","gov50-final-project_files/jquery-3.6.0/jquery-3.6.0.min.js","gov50-final-project_files/jquery-3.6.0/jquery-3.6.0.min.map","gov50-final-project_files/popper-2.6.0/popper.min.js","gov50-final-project_files/tippy-6.2.7/tippy-bundle.umd.min.js","gov50-final-project_files/tippy-6.2.7/tippy-light-border.css","gov50-final-project_files/tippy-6.2.7/tippy.css","gov50-final-project_files/tippy-6.2.7/tippy.umd.min.js","gov50-final-project_files/webcomponents-2.0.0/webcomponents.js","gov50-final-project.html","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.24/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["gov50-final-project_files/anchor-4.2.2/anchor.min.js","gov50-final-project_files/bowser-1.9.3/bowser.min.js","gov50-final-project_files/distill-2.2.21/template.v2.js","gov50-final-project_files/header-attrs-2.24/header-attrs.js","gov50-final-project_files/jquery-3.6.0/jquery-3.6.0.js","gov50-final-project_files/jquery-3.6.0/jquery-3.6.0.min.js","gov50-final-project_files/jquery-3.6.0/jquery-3.6.0.min.map","gov50-final-project_files/popper-2.6.0/popper.min.js","gov50-final-project_files/tippy-6.2.7/tippy-bundle.umd.min.js","gov50-final-project_files/tippy-6.2.7/tippy-light-border.css","gov50-final-project_files/tippy-6.2.7/tippy.css","gov50-final-project_files/tippy-6.2.7/tippy.umd.min.js","gov50-final-project_files/webcomponents-2.0.0/webcomponents.js","gov50-final-project.html","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-3-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.24/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1472,7 +1472,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="index_files/header-attrs-2.24/header-attrs.js"></script>
+  <script src="index_files/header-attrs-2.25/header-attrs.js"></script>
   <script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="index_files/popper-2.6.0/popper.min.js"></script>
   <link href="index_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1524,7 +1524,46 @@ I hypothesize that right-handed catchers will have a higher success rate in thro
 My sample will be all starting major league right handed catchers from 1980-2023 and all starting lefty catchers from 1980-2023. I will then use a simple random sample of each set of catchers to narrow it down to be 10 righty catchers and 10 lefty catchers. The variabel will be =1 for righty and =0 for lefty.
 The outcome variable will be the success rate a throwing the runner out at second base. I might also see if I can find data on framing success in baseball for righty and lefty catchers, but so far I don’t exactly know the scale for my outcome variable.
 If I observe similar success rates of throwing runners out from a righty and lefty catcher, then the common rumor that being a lefty catcher is bad will be disproved. If I observe the opposite, then the rumor will be true.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'>if</span> <span class='op'>(</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span><span class='op'>(</span><span class='st'>'pacman'</span>, quietly <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>'pacman'</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span><span class='fu'>pacman</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/pacman/man/p_load_current_gh.html'>p_load_current_gh</a></span><span class='op'>(</span><span class='st'>"BillPetti/baseballr"</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://broom.tidymodels.org/'>broom</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://haven.tidyverse.org'>haven</a></span><span class='op'>)</span></span>
+<span><span class='va'>mlb</span> <span class='op'>&lt;-</span> <span class='fu'>bref_daily_batter</span><span class='op'>(</span><span class='st'>"2015-08-01"</span>, <span class='st'>"2015-10-03"</span><span class='op'>)</span> </span>
+<span><span class='va'>mlb</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code># A tibble: 6 × 30
+  bbref_id  season Name        Age Level Team      G    PA    AB     R
+  &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1 machama01   2015 Manny Ma…    22 Maj-… Balt…    59   266   237    36
+2 duffyma01   2015 Matt Duf…    24 Maj-… San …    59   264   248    33
+3 altuvjo01   2015 Jose Alt…    25 Maj-… Hous…    57   262   244    30
+4 eatonad02   2015 Adam Eat…    26 Maj-… Chic…    58   262   230    37
+5 choosh01    2015 Shin-Soo…    32 Maj-… Texas    58   260   211    48
+6 lindofr01   2015 Francisc…    21 Maj-… Clev…    58   259   224    35
+# ℹ 20 more variables: H &lt;dbl&gt;, X1B &lt;dbl&gt;, X2B &lt;dbl&gt;, X3B &lt;dbl&gt;,
+#   HR &lt;dbl&gt;, RBI &lt;dbl&gt;, BB &lt;dbl&gt;, IBB &lt;dbl&gt;, uBB &lt;dbl&gt;, SO &lt;dbl&gt;,
+#   HBP &lt;dbl&gt;, SH &lt;dbl&gt;, SF &lt;dbl&gt;, GDP &lt;dbl&gt;, SB &lt;dbl&gt;, CS &lt;dbl&gt;,
+#   BA &lt;dbl&gt;, OBP &lt;dbl&gt;, SLG &lt;dbl&gt;, OPS &lt;dbl&gt;</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>first_plot</span> <span class='op'>&lt;-</span> <span class='va'>mlb</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>BB</span>, y <span class='op'>=</span> <span class='va'>RBI</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span> x <span class='op'>=</span> <span class='st'>"# of Walks Aug.- Oct. 2015"</span>, y <span class='op'>=</span> <span class='st'>"# of RBIs Aug.- Oct. 2015"</span><span class='op'>)</span></span>
+<span><span class='va'>first_plot</span></span></code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
