@@ -39,6 +39,4 @@ mlb |>
 first_plot <- mlb |>
   ggplot(mapping = aes(x = BB, y = RBI)) + geom_point() + labs( x = "# of Walks Aug.- Oct. 2015", y = "# of RBIs Aug.- Oct. 2015")
 first_plot
-  
-
 ```
