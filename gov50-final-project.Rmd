@@ -22,3 +22,27 @@ My sample will be all starting major league right handed catchers from 1980-2023
 The outcome variable will be the success rate a throwing the runner out at second base. I might also see if I can find data on framing success in baseball for righty and lefty catchers, but so far I don't exactly know the scale for my outcome variable.
 If I observe similar success rates of throwing runners out from a righty and lefty catcher, then the common rumor that being a lefty catcher is bad will be disproved. If I observe the opposite, then the rumor will be true.
 
+```{r}
+if (!requireNamespace('pacman', quietly = TRUE)){
+  install.packages('pacman')
+}
+pacman::p_load_current_gh("BillPetti/baseballr")
+```
+
+```{r}
+library(tidyverse)
+library(broom)
+library(haven)
+data <- bref_daily_batter("2015-08-01", "2015-10-03") 
+data |>
+  head()
+```
+
+```{r}
+first_plot <- data |>
+  ggplot(mapping = aes(x = BB, y = RBI)) + geom_point() + labs( x = "# of Walks Aug.- Oct. 2015", y = "# of RBIs Aug.- Oct. 2015")
+first_plot
+  
+
+```
+
