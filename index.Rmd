@@ -8,7 +8,6 @@ output:
 ---
 
 
-
 ## Project thoughts
 
 I am interested in exploring data related to... abortion, birth rates, and miscarriages inmTexas 
@@ -22,22 +21,31 @@ library(tidyverse)
 library(readr)
 head(NationalAndStatePregnancy_PublicUse)
 
-abortion_and_births <- NationalAndStatePregnancy_PublicUse |>
-  select(state, year, abortionratelt20: abortionrate40plus, birthratelt15: birthrate40plus)
+abortion_and_mis <- NationalAndStatePregnancy_PublicUse |>
+  select(state, year, abortionratelt20: abortionrate40plus, miscarriageslt20: miscarriages40plus)
 head(abortion_and_births)
 
 
-CA_abortion_and_births <- abortion_and_births |>
+CA_abortion_and_mis <- abortion_and_mis |>
   subset(state == "CA")
-CA_abortion_and_births
+CA_abortion_and_mis
 ```
-## Plotting birth rates
+## Abortion Plot
 
 ```{r}
 library(dplyr)
-library(tidyverse)
+library(broom)
 
-CA_abortion_and_births |>
-  gglot(mapping = aes(x = year, y = abortionrate2024)) + geom_point()
+
+CAabort_plot <- CA_abortion_and_mis |> 
+  ggplot(mapping = aes(y = abortionrate2024)) + geom_point(mapping = aes(x = year))
+
+```
+## Miscarriage Plot
+
+```{r}
+
+CAmis_plot <- CA_abortion_and_mis |>
+  ggplot(mapping = aes(y = miscarriages2024)) + geom_point(mapping = aes(x = year))
 
 ```
