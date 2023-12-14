@@ -71,7 +71,7 @@ CAtogether_plot
 
 ## Regression Analysis
 
-The intercept on the Miscarriages vs Abortion Rate graph is approximately 13,046. This means that if the abortion rate in California among women aged 20-24 was 0, then we would expect the number of miscarriages to be about 13,046.
+The intercept on the Miscarriages vs Abortion Rate graph is approximately 13,046. This means that if the abortion rate in California among women aged 20-24 was 0, then we would expect the number of miscarriages to be about 13,046. The Abortion rate coefficient is 308 which means that, on average, my model predicts that for every 1 abortion / 1,000 women increase, the number of miscarriages would increase by 308. 
 
 ```{r Linear Regression}
 regression <- lm(miscarriages2024 ~ abortionrate2024, data = CA_abortion_and_mis)
@@ -85,6 +85,10 @@ modelsummary :: modelsummary(regression, gof_map = c("nobs", "r.squared"), coef_
 ```
 
 ## Conclusion
+
+Based on the R^2 value being 0.922, I see that there is a very strong positive correlation between abortion rates and number of miscarriages. This supports my hypothesis that the California abortion rate can predict the miscarriage rate. However, this is an observational study over time, and it is very important to remember that correlation does not mean causation. 
+Some limitations of this data are that this only looks at women aged 20-24 which is a limited range. Expanding the range could greatly affect the trend lines.   
+
 Conclusion section: 1 paragraph (i) summarizing results and assessing the extent to which you find support for your hypothesis; (ii) describing limitations of the analysis and threats to inference (missing data, confounding, etc), and stating how you could improve your analysis if you had more time/money. (2pts)
 
 
