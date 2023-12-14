@@ -12,7 +12,17 @@ output:
 
 I am interested in exploring data related to... how abortions and miscarriages are related in California 
 
-## Paragraph thing...
+## Hypothesis
+
+State your research question.
+Formulate a hypothesis related to the research question. This hypothesis should be rooted in some sort of theory. In other words, you need to present a plausible story why the hypothesis might be true. Often, this is in the form of a behaviorial or institutional explanation. As social scientists, we are not interested in idiosyncratic explanations; we want to understand systematic patterns and relationships!
+Describe your explanatory variable(s) of interest and how it is measured. Importantly, we need to observe variation in this variable in order to study it!
+Describe your outcome variable of interest and how it is measured.
+What observed pattern in the data would provide support for your hypothesis? More importantly, what observed pattern would disprove your hypothesis?
+
+Can the abortion rate predict the miscarriage rate? Abortions often involve intense medical procedures that can negatively affect a woman for future pregnancies. In addition, abortions are often found to be the source of psychological trauma for the mother(CITE). This psychological trauma can lead to something called allostatic load, which is essentially the mechanism for how extreme stress for long periods of time corrodes health (Roder). Due to potential physical damages of an abortion and the psychological damages caused by abortions, I hypothesize that the California abortion rate may be able to predict the miscarriage rate. 
+I will be looking at a data set which describes the abortion rate and the miscarriage rate for women in California age 20-24 from 1988-2017. The abortion and miscarriage rate are per 1,000 women and my explanatory variable is the abortion rate.
+If I observe a strong correlation coefficient between abortions and miscarriages, then I know my hypothesis will be supported. (MAY GO DEEPER W THIS, maybe write what pattern would disprove the hypothesis) 
 
 
 ```{r}
