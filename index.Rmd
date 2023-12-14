@@ -17,7 +17,7 @@ I will be looking at a data set which describes the abortion rate and the number
 If I observe a strong positive coefficient between abortions and miscarriages, then I know my hypothesis will be supported. (MAY GO DEEPER W THIS, maybe write what pattern would disprove the hypothesis) 
 
 
-```{r}
+```{r Loading and Cleaning Data}
 library(tidyverse)
 library(readr)
 head(NationalAndStatePregnancy_PublicUse)
@@ -33,7 +33,7 @@ CA_abortion_and_mis
 ```
 ## Abortion Rate in CA over time
 
-```{r}
+```{r Abortion Rate Over Time}
 library(dplyr)
 library(broom)
 
@@ -46,7 +46,7 @@ CAabort_plot
 
 ## Miscarriage Plot
 
-```{r}
+```{r Miscarriage Count Over Time}
 CAmis_plot <- CA_abortion_and_mis |>
   ggplot(mapping = aes(y = miscarriages2024)) + geom_point(mapping = aes(x = year)) + labs(x = "Year", y = "Miscarriages Among Women in CA age 20-24") + geom_smooth(mapping = aes(x = year), method = "lm")
 CAmis_plot
@@ -55,7 +55,7 @@ CAmis_plot
 
 ## Together plot
 
-```{r}
+```{r Miscarriages vs Abortion Rate}
 CAtogether_plot <- CA_abortion_and_mis |>
   ggplot(mapping = aes(y = miscarriages2024)) + geom_point(mapping = aes(x = abortionrate2024)) + labs(x = "Abortion Rate Among Women in CA Age 20-24 (per 1,000)", y = "Miscarriages Among Women in CA age 20-24") +  geom_smooth(mapping = aes(x = abortionrate2024), method = "lm")
 CAtogether_plot
@@ -64,7 +64,7 @@ CAtogether_plot
 
 ## Linear regression lol
 
-```{r}
+```{r Linear Regression}
 regression <- lm(miscarriages2024 ~ abortionrate2024, data = CA_abortion_and_mis)
 regression
 
@@ -72,7 +72,7 @@ regression
 
 ## How many pregnancies overall in California overtime? (may not be very useful)
 
-```{r}
+```{r Pregnancies Overall}
 CA_pregnancies <- NationalAndStatePregnancy_PublicUse |>
   select(state, year, pregnancyrate2024) |>
   subset(state == "CA")
