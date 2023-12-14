@@ -12,7 +12,7 @@ output:
 
 I am interested in exploring data related to... how abortions and miscarriages are related in California 
 
-Can the abortion rate predict the miscarriage rate? Abortions often involve intense medical procedures that can negatively affect a woman for future pregnancies. In addition, abortions are often found to be the source of psychological trauma for the mother(CITE). This psychological trauma can lead to something called allostatic load, which is essentially the mechanism for how extreme stress for long periods of time corrodes health (Roder). Due to potential physical damages of an abortion and the psychological damages caused by abortions, I hypothesize that the California abortion rate may be able to predict the miscarriage rate. 
+Can the abortion rate predict the miscarriage rate? Abortions often involve intense medical procedures that can negatively affect a woman for future pregnancies. In addition, abortions are often found to be the source of psychological trauma for the mother(Pourreza and Aziz). This psychological trauma can lead to something called allostatic load, which is essentially the mechanism for how extreme stress for long periods of time corrodes health (Roder). Due to potential physical damages of an abortion and the psychological damages caused by abortions, I hypothesize that the California abortion rate may be able to predict the miscarriage rate. 
 I will be looking at a data set which describes the abortion rate and the number of miscarriages for women in California age 20-24 from 1988-2017. The abortion rate is measured per 1,000 women and my explanatory variable is the abortion rate.
 If I observe a strong positive coefficient between abortions and miscarriages, then I know my hypothesis will be supported. (MAY GO DEEPER W THIS, maybe write what pattern would disprove the hypothesis) 
 
@@ -89,7 +89,16 @@ modelsummary :: modelsummary(regression, gof_map = c("nobs", "r.squared"), coef_
 Based on the R^2 value being 0.922, I see that there is a very strong positive correlation between abortion rates and number of miscarriages. This supports my hypothesis that the California abortion rate can predict the miscarriage rate. However, this is an observational study over time, and it is very important to remember that correlation does not mean causation. 
 Some limitations of this data are that this only looks at women aged 20-24 which is a limited range. Expanding the range could greatly affect the trend line. Also, this is only in California. Different states and localities could show drastically different trends.
 Another limitation of this data is that the same number of women who got abortions are not guarunteed to be the same women who has miscarriages. 
-If I had more time and money, I would create a survey of women who had abortions and then follow up to see if thye had a miscarriage. Hovever, this could be a little unethical asking women extremely personal questions. 
+If I had more time and money, I would create a survey of women who had abortions and then follow up to see if thye had a miscarriage. However, this could be a little unethical asking women extremely personal questions. 
+Overall, there is a strong correlation between abortion rate and miscarriages among women in California ages 20-24 from 1988-2017.
+
+
+
+## Work Cited
+
+Pourreza, Abolghasem, and Aziz Batebi. “Psychological Consequences of Abortion among the Post Abortion Care Seeking Women in Tehran.” Iranian journal of psychiatry vol. 6,1 (2011): 31-6.
+
+Roder, Amy. “America Is Failing Its Black Mothers.” Harvard Public Health Magazine, 10 June 2020, www.hsph.harvard.edu/magazine/magazine_article/america-is-failing-its-black-mothers/. 
 
 
 
