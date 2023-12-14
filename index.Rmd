@@ -24,7 +24,6 @@ head(NationalAndStatePregnancy_PublicUse)
 
 abortion_and_mis <- NationalAndStatePregnancy_PublicUse |>
   select(state, year, abortionratelt20: abortionrate40plus, miscarriageslt20: miscarriages40plus)
-head(abortion_and_births)
 
 
 CA_abortion_and_mis <- abortion_and_mis |>
