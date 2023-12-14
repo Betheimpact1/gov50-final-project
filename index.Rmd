@@ -71,6 +71,8 @@ CAtogether_plot
 
 ## Regression Analysis
 
+The intercept on the Miscarriages vs Abortion Rate graph is approximately 13,046. This means that if the abortion rate in California among women aged 20-24 was 0, then we would expect the number of miscarriages to be about 13,046.
+
 ```{r Linear Regression}
 regression <- lm(miscarriages2024 ~ abortionrate2024, data = CA_abortion_and_mis)
 regression
