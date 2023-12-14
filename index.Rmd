@@ -87,9 +87,9 @@ modelsummary :: modelsummary(regression, gof_map = c("nobs", "r.squared"), coef_
 ## Conclusion
 
 Based on the R^2 value being 0.922, I see that there is a very strong positive correlation between abortion rates and number of miscarriages. This supports my hypothesis that the California abortion rate can predict the miscarriage rate. However, this is an observational study over time, and it is very important to remember that correlation does not mean causation. 
-Some limitations of this data are that this only looks at women aged 20-24 which is a limited range. Expanding the range could greatly affect the trend lines.   
-
-Conclusion section: 1 paragraph (i) summarizing results and assessing the extent to which you find support for your hypothesis; (ii) describing limitations of the analysis and threats to inference (missing data, confounding, etc), and stating how you could improve your analysis if you had more time/money. (2pts)
+Some limitations of this data are that this only looks at women aged 20-24 which is a limited range. Expanding the range could greatly affect the trend line. Also, this is only in California. Different states and localities could show drastically different trends.
+Another limitation of this data is that the same number of women who got abortions are not guarunteed to be the same women who has miscarriages. 
+If I had more time and money, I would create a survey of women who had abortions and then follow up to see if thye had a miscarriage. Hovever, this could be a little unethical asking women extremely personal questions. 
 
 
 
