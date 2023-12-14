@@ -16,6 +16,7 @@ Can the abortion rate predict the miscarriage rate? Abortions often involve inte
 I will be looking at a data set which describes the abortion rate and the number of miscarriages for women in California age 20-24 from 1988-2017. The abortion rate is measured per 1,000 women and my explanatory variable is the abortion rate.
 If I observe a strong positive coefficient between abortions and miscarriages, then I know my hypothesis will be supported. (MAY GO DEEPER W THIS, maybe write what pattern would disprove the hypothesis) 
 
+## Loading Data
 
 ```{r Loading and Cleaning Data}
 library(tidyverse)
@@ -33,7 +34,9 @@ CA_abortion_and_mis <- abortion_and_mis |>
   subset(state == "CA")
 CA_abortion_and_mis
 ```
-## Abortion Rate in CA over time
+## Abortion Rate in California over time
+
+Based on the trend line, the abortion rate among women in California aged 20-24 has steadily decreased since the 90s.
 
 ```{r Abortion Rate Over Time}
 library(dplyr)
@@ -46,7 +49,9 @@ CAabort_plot
 
 ```
 
-## Miscarriage Plot
+## Miscarriages in Califonia Overtime
+
+This plot also reveals that miscarriages have decreased among California women aged 20-24 since the 90s.
 
 ```{r Miscarriage Count Over Time}
 CAmis_plot <- CA_abortion_and_mis |>
@@ -55,7 +60,7 @@ CAmis_plot
 
 ```
 
-## Together plot
+## Miscarriages vs Abortion Rate
 
 ```{r Miscarriages vs Abortion Rate}
 CAtogether_plot <- CA_abortion_and_mis |>
@@ -64,25 +69,22 @@ CAtogether_plot
 
 ```
 
-## Linear regression lol
+## Regression Analysis
 
 ```{r Linear Regression}
 regression <- lm(miscarriages2024 ~ abortionrate2024, data = CA_abortion_and_mis)
 regression
 
-```
+varnames <- c("(Intercept)" = "Intercept", "abortionrate2024" = "Abortion Rate")
 
-## How many pregnancies overall in California overtime? (may not be very useful)
 
-```{r Pregnancies Overall}
-CA_pregnancies <- NationalAndStatePregnancy_PublicUse |>
-  select(state, year, pregnancyrate2024) |>
-  subset(state == "CA")
-head(CA_pregnancies)
-
-CA_pregnancies |> 
-  ggplot(mapping = aes(x = year)) + geom_point(mapping = aes(y = pregnancyrate2024))
-  
-
+modelsummary :: modelsummary(regression, gof_map = c("nobs", "r.squared"), coef_map = varnames)
 
 ```
+
+## Conclusion
+Conclusion section: 1 paragraph (i) summarizing results and assessing the extent to which you find support for your hypothesis; (ii) describing limitations of the analysis and threats to inference (missing data, confounding, etc), and stating how you could improve your analysis if you had more time/money. (2pts)
+
+
+
+
