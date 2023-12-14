@@ -20,8 +20,11 @@ If I observe a strong positive coefficient between abortions and miscarriages, t
 ```{r Loading and Cleaning Data}
 library(tidyverse)
 library(readr)
-head(NationalAndStatePregnancy_PublicUse)
 
+NationalAndStatePregnancy_PublicUse <- read_csv("NationalAndStatePregnancy_PublicUse.csv")
+
+
+head(NationalAndStatePregnancy_PublicUse)
 abortion_and_mis <- NationalAndStatePregnancy_PublicUse |>
   select(state, year, abortionratelt20: abortionrate40plus, miscarriageslt20: miscarriages40plus)
 
